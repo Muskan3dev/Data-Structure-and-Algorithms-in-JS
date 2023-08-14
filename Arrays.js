@@ -39,3 +39,20 @@ array.pop()
 console.log("Deleting element at index 4:");
 deleteElement(array, 4);
 traversearray(array);
+
+//Searching in Arrays
+function searchelement(arr,element){
+    for(let i=0; i<array.length; i++){
+        if(arr[i]===element){
+            return i;
+        }
+        return -1;
+    }
+}
+const search=searchelement(array,10);
+if (search !== -1) {
+    console.log(`Element found at index ${search}.`);
+  } else {
+    console.log("Element not found.");
+  }
+  
