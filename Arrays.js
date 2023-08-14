@@ -3,9 +3,9 @@
 
 //Traversing an array
 const array=[10,20,30,40,50]
-function traversearray(){
+function traversearray(array){
     for(let i=0;i<array.length;i++){
-        console.log(arr[i])
+        console.log(array[i])
     }
 }
 
