@@ -25,3 +25,17 @@ function insertelement(arr,index,element){
 console.log("Inserting element 100 at index 2:");
 insertelement(array, 2, 100);
 traversearray(array);
+
+//Deletion
+function deleteElement(arr,index){
+if(index<0||index>=array.length){
+    console.log("Invalid index for deletion");
+}
+for(let i=index;i<array.length-1;i++){
+    arr[i]=arr[i+1];
+}
+array.pop()
+}
+console.log("Deleting element at index 4:");
+deleteElement(array, 4);
+traversearray(array);
