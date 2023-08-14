@@ -11,3 +11,17 @@ function traversearray(array){
 
 console.log("Traversing array elements");
 traversearray(array);
+
+//Inserting an element in array
+function insertelement(arr,index,element){
+    if(index<0||index>arr.length){
+        console.log("Invalid Index for Insertion");
+    }
+    for(let i=arr.length-1; i>=index;i--){
+        arr[i+1]=arr[i];
+    }
+    arr[index]=element;
+}
+console.log("Inserting element 100 at index 2:");
+insertelement(array, 2, 100);
+traversearray(array);
