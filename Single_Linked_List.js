@@ -27,6 +27,32 @@ push(val){
     this.length++;
     return this;
     }
+    
+pop()
+{
+    if(!this.head) {
+        return undefined;
+    }
+
+    let current = this.head;
+    let newTail = current;
+
+    while (current.next) {
+        newTail = current;
+        current = current.next;
+    }
+
+    this.tail = newTail;
+    this.tail.next = null;
+    this.length--;
+
+    if (this.length === 0) {
+        this.head = null;
+        this.tail = null;
+    }
+
+    return current;
+}
 }
 // Create a new singly linked list
 const list = new SingleLinkedList();
@@ -40,4 +66,9 @@ list.push(50);
 
 // Display the list elements
 console.log("Singly Linked List elements:");
+console.log(list);
+
+// Pop an element from the end
+const popped = list.pop();
+console.log("Popped:", popped.value);
 console.log(list);
