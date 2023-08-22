@@ -53,6 +53,18 @@ pop()
 
     return current;
 }
+//performing shift operation  
+shift(){
+    if(!this.head)
+    return undefined;
+    let currentHead=this.head;
+    this.head=currentHead.next;
+    this.length--;
+    if(this.length===0){
+        this.tail=null;
+    }
+return currentHead;
+}
 }
 // Create a new singly linked list
 const list = new SingleLinkedList();
@@ -71,4 +83,9 @@ console.log(list);
 // Pop an element from the end
 const popped = list.pop();
 console.log("Popped:", popped.value);
+console.log(list);
+
+//Shifting 
+const shifted = list.shift();
+console.log("Shifted:", shifted.value);
 console.log(list);
