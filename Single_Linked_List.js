@@ -65,6 +65,20 @@ shift(){
     }
 return currentHead;
 }
+//performing Unshift operation 
+unshift(val){
+    let newNode=new Node(val);
+    if(!this.head){
+        this.head=newNode;
+        this.tail=this.head;
+    }
+    else{
+        newNode.next=this.head;
+        this.head=newNode;
+    }
+    this.length++;
+    return this;
+}
 }
 // Create a new singly linked list
 const list = new SingleLinkedList();
@@ -89,3 +103,7 @@ console.log(list);
 const shifted = list.shift();
 console.log("Shifted:", shifted.value);
 console.log(list);
+
+//unshift
+list.unshift(50);
+console.log("After unshifting 50:", list);
