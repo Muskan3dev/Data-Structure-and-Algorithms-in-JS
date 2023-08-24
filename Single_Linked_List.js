@@ -79,7 +79,22 @@ unshift(val){
     this.length++;
     return this;
 }
+//performing get() operation
+get(index) {
+    if (index < 0 || index >= this.length) {
+        return undefined;
+    }
+
+    let current = this.head;
+    for (let i = 0; i < index; i++) {
+        current = current.next;
+    }
+
+    return current;
 }
+}
+
+
 // Create a new singly linked list
 const list = new SingleLinkedList();
 
@@ -107,3 +122,10 @@ console.log(list);
 //unshift
 list.unshift(50);
 console.log("After unshifting 50:", list);
+
+//get
+// Get node at index 2
+const nodeAtIndex2 = list.get(2);
+
+console.log("Node at index 2:", nodeAtIndex2);
+console.log("Value at index 2:", nodeAtIndex2.value);
