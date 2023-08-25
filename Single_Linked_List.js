@@ -92,7 +92,18 @@ get(index) {
 
     return current;
 }
+//performing set operation
+set(index, val) {
+    const foundnode = this.get(index);
+    if (node) {
+        foundnode.val = val;
+        return true;
+    }
+    return false;
 }
+}
+
+
 
 
 // Create a new singly linked list
@@ -129,3 +140,6 @@ const nodeAtIndex2 = list.get(2);
 
 console.log("Node at index 2:", nodeAtIndex2);
 console.log("Value at index 2:", nodeAtIndex2.value);
+
+// Set value at index 1 to 25
+list.set(1, 2);
