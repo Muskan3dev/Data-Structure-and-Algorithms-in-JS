@@ -101,7 +101,31 @@ set(index, val) {
     }
     return false;
 }
+//performing Insert operation
+insert(index, val) {
+    if (index < 0 || index > this.length) {
+        return false;
+    }
+
+    if (index === 0) {
+        return !!this.unshift(val);
+    }
+
+    if (index === this.length) {
+        return !!this.push(val);
+    }
+
+    const newNode = new Node(val);
+    const prevNode = this.get(index - 1);
+    newNode.next = prevNode.next;
+    prevNode.next = newNode;
+    this.length++;
+
+    return true;
 }
+}
+
+
 
 
 
@@ -143,3 +167,11 @@ console.log("Value at index 2:", nodeAtIndex2.value);
 
 // Set value at index 1 to 25
 list.set(1, 2);
+list.insert(1, 15);
+
+// Insert value 15 at index 1
+list.insert(2, 10);
+
+console.log(list); 
+
+
