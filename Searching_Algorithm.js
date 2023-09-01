@@ -49,3 +49,29 @@ function linearSearch(arr, val) {
     console.log(`Value ${targetValue} not found in the array`);
   }
   
+  //Bubble Sort
+  function bubbleSort(arr) {
+    const arrayLength = arr.length;
+    let swap;
+  
+    do {
+      swap = false;
+  
+      for (let currentIndex = 0; currentIndex < arrayLength - 1; currentIndex++) {
+        if (arr[currentIndex] > arr[currentIndex + 1]) {
+          const temp = arr[currentIndex];
+          arr[currentIndex] = arr[currentIndex + 1];
+          arr[currentIndex + 1] = temp;
+          swapped = true;
+        }
+      }
+    } while (swap);
+  
+    return arr;
+  }
+  
+  const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
+  const SortedArray = bubbleSort(unsortedArray);
+  
+  console.log("Sorted Array:", SortedArray);
+  
