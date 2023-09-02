@@ -131,3 +131,49 @@ const UnSortedArray = [64, 34, 25, 12, 22, 11, 90];
 const sortedarray = selectionSort(UnSortedArray);
 
 console.log("Sorted Array:", sortedarray);
+
+//Merge Sort
+function mergeSort(arr) {
+  //Base Case
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  // Split the array into two halves
+  const middleIndex = Math.floor(arr.length / 2);
+  const leftHalf = arr.slice(0, middleIndex);
+  const rightHalf = arr.slice(middleIndex);
+
+  // Recursively sort each half
+  const sortedLeft = mergeSort(leftHalf);
+  const sortedRight = mergeSort(rightHalf);
+
+  // Merge the sorted halves
+  return merge(sortedLeft, sortedRight);
+}
+
+function merge(left, right) {
+  let result = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+
+  // Compare elements from both arrays and add the smaller element to the result
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  
+  return result.concat(left.slice(leftIndex), right.slice(rightIndex));
+}
+
+
+const unsortedArr = [64, 34, 25, 12, 22, 11, 90];
+const sortedArr = mergeSort(unsortedArr);
+
+console.log("Sorted Array:", sortedArr);
