@@ -168,12 +168,39 @@ function merge(left, right) {
     }
   }
 
-  
   return result.concat(left.slice(leftIndex), right.slice(rightIndex));
 }
-
 
 const unsortedArr = [64, 34, 25, 12, 22, 11, 90];
 const sortedArr = mergeSort(unsortedArr);
 
 console.log("Sorted Array:", sortedArr);
+
+//Quick sort
+function quickSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const pivot = arr[Math.floor(Math.random() * arr.length)]; // Randomly select a pivot
+  const left = [];
+  const equal = [];
+  const right = [];
+
+  for (const element of arr) {
+    if (element < pivot) {
+      left.push(element);
+    } else if (element === pivot) {
+      equal.push(element);
+    } else {
+      right.push(element);
+    }
+  }
+
+  return quickSort(left).concat(equal, quickSort(right)); // Recursively sort and combine the three subarrays
+}
+
+const unsortedarr = [64, 34, 25, 12, 22, 11, 90];
+const sortedarr = quickSort(unsortedarr);
+
+console.log("Sorted Array:", sortedarr);
