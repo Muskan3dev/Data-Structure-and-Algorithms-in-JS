@@ -75,3 +75,28 @@ function linearSearch(arr, val) {
   
   console.log("Sorted Array:", SortedArray);
   
+  //Insertion Sort
+  function insertionSort(arr) {
+    const arrayLength = arr.length;
+  
+    for (let currentIndex = 1; currentIndex < arrayLength; currentIndex++) {
+      const currentElement = arr[currentIndex];
+      let comparisonIndex = currentIndex - 1;
+  
+      while (comparisonIndex >= 0 && arr[comparisonIndex] > currentElement) {
+        arr[comparisonIndex + 1] = arr[comparisonIndex];
+        comparisonIndex--;
+      }
+  
+      arr[comparisonIndex + 1] = currentElement;
+    }
+  
+    return arr;
+  }
+  
+  // Example usage:
+  const UnsortedArray = [64, 34, 25, 12, 22, 11, 90];
+  const Sortedarray = insertionSort(unsortedArray);
+  
+  console.log("Sorted Array:", Sortedarray);
+  
