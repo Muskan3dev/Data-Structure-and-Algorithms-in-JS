@@ -204,3 +204,45 @@ const unsortedarr = [64, 34, 25, 12, 22, 11, 90];
 const sortedarr = quickSort(unsortedarr);
 
 console.log("Sorted Array:", sortedarr);
+
+//Radix sort
+function getDigit(num, place) {
+  return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
+}
+
+
+function digitCount(num) {
+  if (num === 0) return 1;
+  return Math.floor(Math.log10(Math.abs(num))) + 1;
+}
+
+// Find the maximum number of digits in an array of integers
+function mostDigits(arr) {
+  let maxDigits = 0;
+  for (let i = 0; i < arr.length; i++) {
+    maxDigits = Math.max(maxDigits, digitCount(arr[i]));
+  }
+  return maxDigits;
+}
+
+function radixSort(arr) {
+  const maxDigits = mostDigits(arr);
+
+  for (let k = 0; k < maxDigits; k++) {
+    const buckets = Array.from({ length: 10 }, () => []);
+
+    for (let i = 0; i < arr.length; i++) {
+      const digit = getDigit(arr[i], k);
+      buckets[digit].push(arr[i]);
+    }
+
+    arr = [].concat(...buckets);
+  }
+
+  return arr;
+}
+
+const UNSORTEDARR = [999,150,180,250,270,450,230,89];
+const SORTEDARR = radixSort(UNSORTEDARR)
+
+console.log("Sorted Array:", SORTEDARR);
