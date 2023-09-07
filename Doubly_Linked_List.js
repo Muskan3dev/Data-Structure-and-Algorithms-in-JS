@@ -45,4 +45,58 @@ class Node {
     this.length--;
     return poppedNode;
   }
+
+//Insert() method
+insert(index, value) {
+    if (index < 0 || index > this.length) return false;
+    if (index === 0) return !!this.unshift(value);
+    if (index === this.length) return !!this.push(value);
+
+    const newNode = new Node(value);
+    const beforeNode = this.get(index - 1);
+    const afterNode = beforeNode.next;
+
+    beforeNode.next = newNode;
+    newNode.prev = beforeNode;
+
+    newNode.next = afterNode;
+    afterNode.prev = newNode;
+
+    this.length++;
+    return true;
   }
+
+  //Adding Remove() Method
+  remove(index) {
+    if (index < 0 || index >= this.length) return undefined;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+
+    const removedNode = this.get(index);
+    const beforeNode = removedNode.prev;
+    const afterNode = removedNode.next;
+
+    beforeNode.next = afterNode;
+    afterNode.prev = beforeNode;
+
+    removedNode.prev = null;
+    removedNode.next = null;
+    this.length--;
+    return removedNode;
+  }
+
+  }
+
+  const doublyLinkedList = new DoublyLinkedList();
+  doublyLinkedList.push(10);
+  doublyLinkedList.push(20);
+  doublyLinkedList.push(30);
+  
+  console.log("Doubly Linked List:", doublyLinkedList);
+  console.log("Popped Node:", doublyLinkedList.pop());
+  console.log("Doubly Linked List after pop:", doublyLinkedList);
+  console.log("Removed Node at Index 1:", doublyLinkedList.remove(1));
+
+
+
+  
