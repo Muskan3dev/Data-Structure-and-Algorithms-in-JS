@@ -101,9 +101,16 @@ insert(index, value) {
     }
     return current;
   }
-
-
+//set method()
+set(index, value) {
+    const foundNode = this.get(index);
+    if (foundNode) {
+      foundNode.value = value;
+      return true;
+    }
+    return false;
   }
+}
 
   const doublyLinkedList = new DoublyLinkedList();
   doublyLinkedList.push(10);
@@ -115,6 +122,7 @@ insert(index, value) {
   console.log("Doubly Linked List after pop:", doublyLinkedList);
   console.log("Removed Node at Index 1:", doublyLinkedList.remove(1));
   console.log("Get Node at Index 1:", doublyLinkedList.get(2));
+  console.log("Doubly Linked List after set:", doublyLinkedList);
 
 
 
