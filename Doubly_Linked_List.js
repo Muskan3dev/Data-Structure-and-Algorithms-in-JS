@@ -84,6 +84,24 @@ insert(index, value) {
     this.length--;
     return removedNode;
   }
+  //get() method
+  get(index) {
+    if (index < 0 || index >= this.length) return undefined;
+    let current;
+    if (index <= this.length / 2) {
+      current = this.head;
+      for (let i = 0; i < index; i++) {
+        current = current.next;
+      }
+    } else {
+      current = this.tail;
+      for (let i = this.length - 1; i > index; i--) {
+        current = current.prev;
+      }
+    }
+    return current;
+  }
+
 
   }
 
@@ -96,6 +114,7 @@ insert(index, value) {
   console.log("Popped Node:", doublyLinkedList.pop());
   console.log("Doubly Linked List after pop:", doublyLinkedList);
   console.log("Removed Node at Index 1:", doublyLinkedList.remove(1));
+  console.log("Get Node at Index 1:", doublyLinkedList.get(2));
 
 
 
