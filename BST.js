@@ -67,6 +67,22 @@ class BinarySearchTree {
         }
         return false;
     }
+    
+    //Traversing trees using BFS
+    BFS(){
+        var node = this.root,
+            data = [],
+            queue = [];
+        queue.push(node);
+
+        while(queue.length){
+           node = queue.shift();
+           data.push(node.value);
+           if(node.left) queue.push(node.left);
+           if(node.right) queue.push(node.right);
+        }
+        return data;
+    }
 }
 
 
@@ -82,7 +98,7 @@ tree.insert(11)
 tree.insert(2)
 tree.insert(16)
 tree.insert(7)
-
+tree.BFS()
 
 
 
