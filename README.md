@@ -87,4 +87,11 @@ Insertion sort iteratively sorts the list by inserting the current element into 
     - Best: O(n)
     - Average: O(𝑛²)
     - Worst: O(𝑛²)
+### Merge Sort
+Merge sort is a divide-and-conquer algorithm. It continuously divides the array until it has single element arrays, then combines them in a manner that results in a sorted array.
+
+* Time complexity:
+    - Best: O(n log(n))
+    - Average: O(n log(n))
+    - Worst: O(n log(n))
 
