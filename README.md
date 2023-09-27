@@ -116,4 +116,35 @@ A Priority Queue is an abstract data type that is similar to a normal queue but 
     - Search: O(n)
     - Insertion: O(log(n))
     - Deletion: O(log(n))
+## Binary Heaps
+
+Binary Heaps are binary trees with the property that each node is less than or equal to its parent and each child node is either greater than or equal to its parent.
+
+* Time complexity:
+    - Access: O(n)
+    - Search: O(n)
+    - Insertion: O(log(n))
+    - Deletion: O(log(n))
+
+## Hash Table
+
+A Hash Table is a data structure that stores key-value pairs. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
+
+* Time complexity:
+    - Access: O(1)
+    - Search: O(1) (average case)
+    - Insertion: O(1) (average case)
+    - Deletion: O(1) (average case)
+
+## Radix Sort
+
+Radix Sort is a linear sorting algorithm that sorts elements by grouping them into buckets based on different digits or significant places. It can be used to sort numbers or strings.
+
+* Time complexity:
+    - Best: O(kn)
+    - Average: O(kn)
+    - Worst: O(kn)
+
+(*Replace 'k' with the maximum number of digits or significant places in the input*)
+
 
