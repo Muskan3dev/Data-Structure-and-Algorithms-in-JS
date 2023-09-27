@@ -94,4 +94,11 @@ Merge sort is a divide-and-conquer algorithm. It continuously divides the array 
     - Best: O(n log(n))
     - Average: O(n log(n))
     - Worst: O(n log(n))
+### Quick Sort
+QuickSort is a divide-and-conquer method for sorting. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot.
+
+* Time complexity:
+    - Best: O(n log(n))
+    - Average: O(n log(n))
+    - Worst: O(𝑛²)
 
