@@ -80,4 +80,11 @@ Selection sort is a simple comparison-based algorithm. It divides the input into
     - Best: O(𝑛²)
     - Average: O(𝑛²)
     - Worst: O(𝑛²)
+### Insertion Sort
+Insertion sort iteratively sorts the list by inserting the current element into its correct position relative to previously sorted elements.
+
+* Time complexity:
+    - Best: O(n)
+    - Average: O(𝑛²)
+    - Worst: O(𝑛²)
 
