@@ -9,6 +9,10 @@ This repository covers some of the most common data structures and algorithms im
 5. [Graph](#graph)
 6. [Binary Search Tree](#binary-search-tree)
 7. [Sorting Algorithms](#sorting-algorithms)
+8. 8. [Priority Queue](#priority-queue)
+9. [Binary Heaps](#binary-heaps)
+10. [Hash Table](#hash-table)
+11. [Dijkstra's Algorithm](#dijkstras-algorithm)
 
 ## Array
 Arrays are data structures that store items of the same data type. The elements are stored at contiguous memory locations allowing easy modification and retrieval of elements.
