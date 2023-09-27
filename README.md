@@ -147,4 +147,14 @@ Radix Sort is a linear sorting algorithm that sorts elements by grouping them in
 
 (*Replace 'k' with the maximum number of digits or significant places in the input*) 
 
+## Dijkstra's Algorithm
+
+Dijkstra's Algorithm is an algorithm used to find the shortest path between two nodes in a graph, particularly in graphs with non-negative edge weights. It explores the graph in a breadth-first manner, gradually expanding the shortest path from the source node to all other nodes.
+
+* Time complexity:
+    - Best: O(|E| + |V| log|V|)
+    - Average: O(|E| + |V| log|V|)
+    - Worst: O(|E| + |V| log|V|)
+
+Dijkstra's Algorithm is widely used in various applications such as network routing protocols and map navigation systems.
 
