@@ -9,7 +9,7 @@ This repository covers some of the most common data structures and algorithms im
 5. [Graph](#graph)
 6. [Binary Search Tree](#binary-search-tree)
 7. [Sorting Algorithms](#sorting-algorithms)
-8. 8. [Priority Queue](#priority-queue)
+ 8.[Priority Queue](#priority-queue)
 9. [Binary Heaps](#binary-heaps)
 10. [Hash Table](#hash-table)
 11. [Dijkstra's Algorithm](#dijkstras-algorithm)
@@ -105,4 +105,13 @@ QuickSort is a divide-and-conquer method for sorting. It works by selecting a 'p
     - Best: O(n log(n))
     - Average: O(n log(n))
     - Worst: O(𝑛²)
+## Priority Queue
+
+A Priority Queue is an abstract data type that is similar to a normal queue but each element has a priority assigned to it. Elements with higher priority are dequeued before elements with lower priority.
+
+* Time complexity:
+    - Access: O(n)
+    - Search: O(n)
+    - Insertion: O(log(n))
+    - Deletion: O(log(n))
 
