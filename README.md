@@ -73,4 +73,11 @@ Bubble Sort repeatedly steps through the list, compares adjacent elements and sw
     - Best: O(n)
     - Average: O(𝑛²)
     - Worst: O(𝑛²)
+### Selection Sort
+Selection sort is a simple comparison-based algorithm. It divides the input into a sorted region and an unsorted region, repeatedly selecting the smallest (or largest) element and moving it into the sorted region.
+
+* Time complexity:
+    - Best: O(𝑛²)
+    - Average: O(𝑛²)
+    - Worst: O(𝑛²)
 
