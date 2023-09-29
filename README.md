@@ -16,6 +16,7 @@ This repository covers some of the most common data structures and algorithms im
 
 
 
+
 ## Array
 Arrays are data structures that store items of the same data type. The elements are stored at contiguous memory locations allowing easy modification and retrieval of elements.
 
