@@ -141,7 +141,7 @@ A Hash Table is a data structure that stores key-value pairs. It uses a hash fun
 
 Radix Sort is a linear sorting algorithm that sorts elements by grouping them into buckets based on different digits or significant places. It can be used to sort numbers or strings.
 
-* Time complexity:
+* Time complexity: 
     - Best: O(kn)
     - Average: O(kn)
     - Worst: O(kn)
