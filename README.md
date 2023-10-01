@@ -11,7 +11,7 @@ This repository covers some of the most common data structures and algorithms im
 8. [Priority Queue](#priority-queue)
 9. [Binary Heaps](#binary-heaps)
 10. [Hash Table](#hash-table)
-11. [Dijkstra's Algorithm](#dijkstras-algorithm)
+11. [Dijkstra's Algorithm](#dijkstras-algorithm) 
 
  
 
