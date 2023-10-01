@@ -1,4 +1,4 @@
-# Data Structures and Algorithms in Javascript
+# Data Structures and Algorithms in Javascript 
 This repository covers some of the most common data structures and algorithms implemented in JavaScript.
 ## Table of Contents
 1. [Array](#array) 
