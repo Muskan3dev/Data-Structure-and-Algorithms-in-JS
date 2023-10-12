@@ -3,7 +3,7 @@ This repository covers some of the most common data structures and algorithms im
 ## Table of Contents 
 1. [Array](#array)    
 2. [Linked List](#linked-list)
-3. [Stack](#stack)  
+3. [Stack](#stack)   
 4. [Queue](#queue)
 5. [Graph](#graph)
 6. [Binary Search Tree](#binary-search-tree)
