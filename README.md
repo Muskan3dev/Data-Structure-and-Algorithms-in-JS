@@ -125,7 +125,7 @@ Binary Heaps are binary trees with the property that each node is less than or e
     - Access: O(n)
     - Search: O(n)
     - Insertion: O(log(n))
-    - Deletion: O(log(n))
+    - Deletion: O(log(n)) 
 
 ## Hash Table
 
