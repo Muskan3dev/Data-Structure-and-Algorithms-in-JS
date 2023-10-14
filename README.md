@@ -9,7 +9,7 @@ This repository covers some of the most common data structures and algorithms im
 6. [Binary Search Tree](#binary-search-tree)
 7. [Sorting Algorithms](#sorting-algorithms)
 8. [Priority Queue](#priority-queue)
-9. [Binary Heaps](#binary-heaps)
+9. [Binary Heaps](#binary-heaps) 
 10. [Hash Table](#hash-table)
 11. [Dijkstra's Algorithm](#dijkstras-algorithm) 
 
